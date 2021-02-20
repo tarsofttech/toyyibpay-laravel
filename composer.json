@@ -1,0 +1,37 @@
+{
+    "name": "tarsoft/toyyibpay",
+    "description": "Laravel Package for ToyyibPay API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MUHAMMAD TARMIZI SANUSI AFKAR",
+            "email": "realtarmizisanusi@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tarsoft\\Toyyibpay\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tarsoft\\Toyyibpay\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tarsoft\\Toyyibpay\\ToyyibpayServiceProvider"
+            ],
+            "aliases": {
+                "Toyyibpay": "Tarsoft\\Toyyibpay\\ToyyibpayFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3|^7.0.1",
+        "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|^6.0|^7.0|^8.0"
+    }
+}
