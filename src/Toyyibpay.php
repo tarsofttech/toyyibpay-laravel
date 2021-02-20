@@ -39,4 +39,37 @@ class Toyyibpay
         $result = json_decode($res->getBody()->getContents());
         return $result;
     }
+
+    #
+    # Toyyibpay Get Banks
+    #
+    public function getBanks()
+    {
+        $url = $this->toyyibpay_uri.'/index.php/api/getBank';
+      
+        $res = $this->get($url, []);
+        return $res;
+    }
+
+    #
+    # Toyyibpay Get Banks FPX
+    #
+    public function getBanksFPX()
+    {
+        $url = $this->toyyibpay_uri.'/index.php/api/getBankFPX';
+      
+        $res = $this->get($url, []);
+        return $res;
+    }
+
+    #
+    # Toyyibpay Get Packages
+    #
+    public function getPackages()
+    {
+        $url = $this->toyyibpay_uri.'/index.php/api/getPackage';
+      
+        $res = $this->get($url, []);
+        return $res;
+    }
 }
