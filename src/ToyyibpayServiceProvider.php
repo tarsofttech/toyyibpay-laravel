@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 
 use Illuminate\Support\ServiceProvider;
 
-class ToyyibPayServiceProvider extends ServiceProvider
+class ToyyibpayServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
