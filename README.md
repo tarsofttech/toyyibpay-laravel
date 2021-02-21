@@ -58,6 +58,48 @@ class MyController extends Controller
 }
 ```
 
+#### Get Bank
+
+```php
+Toyyibpay::getBanks();
+```
+
+#### Get Bank FPX
+
+```php
+Toyyibpay::getBanksFPX();
+```
+
+#### Get Package
+
+```php
+Toyyibpay::getPackages();
+```
+
+#### Create Category
+
+```php
+Toyyibpay::createCategory($name, $description);
+```
+
+#### Get Category
+
+```php
+Toyyibpay::getCategory($code);
+```
+
+#### Create Bill
+
+```php
+Toyyibpay::createBill($code, $bill_object);
+```
+
+#### Get Bill Payment Link
+
+```php
+Toyyibpay::billPaymentLink($bill_code);
+```
+
 ### Opening an Issue
 Before opening an issue there are a couple of considerations:
 * You are all cute and geek!
