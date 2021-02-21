@@ -58,3 +58,14 @@ class MyController extends Controller
 }
 ```
 
+### Opening an Issue
+Before opening an issue there are a couple of considerations:
+* You are all cute and geek!
+* **Check** that the issue is not *specific to your development environment* setup.
+* **Provide** *duplication steps*.
+* If you have a questions send me an email to tarmizi@mizi.my
+* Need a coach or assistance, I can do my best on Telegram: https://t.me/tarmizisanusi
+* Please be considerate that this is an open source project that I provide to the community for FREE.
+
+### License
+Laravel Toyyibpay(the package) is licensed under the MIT license. Enjoy!
