@@ -109,4 +109,46 @@ class Toyyibpay
         $res = $this->post($url, $data);
         return $res;
     }
+
+    #
+    # Toyyibpay Create Bill
+    #
+    public function createBill($code, $bill_object)
+    {
+        $url = $this->toyyibpay_uri.'/index.php/api/createBill';
+
+        $data = [
+            'form_params' => [
+                'categoryCode' => $code,
+                'userSecretKey' => $this->user_secret_key,
+                'billName'=> $bill_object->billName,
+                'billDescription'=> $bill_object->billDescription,
+                'billPriceSetting'=> $bill_object->billPriceSetting,
+                'billPayorInfo'=> $bill_object->billPayorInfo,
+                'billAmount'=> $bill_object->billAmount,
+                'billReturnUrl'=> $bill_object->billReturnUrl ?? $this->redirect_uri,
+                'billCallbackUrl'=> $bill_object->billCallbackUrl ?? $this->redirect_uri,
+                'billExternalReferenceNo' => $bill_object->billExternalReferenceNo,
+                'billTo'=> $bill_object->billTo,
+                'billEmail'=> $bill_object->billEmail,
+                'billPhone'=> $bill_object->billPhone,
+                'billSplitPayment'=> $bill_object->billSplitPayment ?? 0,
+                'billSplitPaymentArgs'=> $bill_object->billSplitPaymentArgs ?? '',
+                'billPaymentChannel'=> $bill_object->billPaymentChannel ?? '0',
+                'billContentEmail'=> $bill_object->billContentEmail ?? '',
+                'billChargeToCustomer'=> $bill_object->billChargeToCustomer ?? 1,
+            ]
+        ];
+
+        $res = $this->post($url, $data);
+        return $res;
+    }
+
+    #
+    # Toyyibpay Get Payment Link
+    #
+    public function billPaymentLink($bill_code)
+    {
+        return $this->toyyibpay_uri .'/'. $bill_code;
+    }
 }
