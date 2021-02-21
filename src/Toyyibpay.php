@@ -72,4 +72,41 @@ class Toyyibpay
         $res = $this->get($url, []);
         return $res;
     }
+
+    #
+    # Toyyibpay Create Category
+    #
+    public function createCategory($name, $description)
+    {
+        $url = $this->toyyibpay_uri.'/index.php/api/createCategory';
+
+        $data = [
+            'form_params' => [
+                'catname' => $name,
+                'catdescription' => $description,
+                'userSecretKey' => $this->user_secret_key
+            ]
+        ];
+
+        $res = $this->post($url, $data);
+        return $res;
+    }
+
+    #
+    # Toyyibpay Get Category
+    #
+    public function getCategory($code)
+    {
+        $url = $this->toyyibpay_uri.'/index.php/api/getCategoryDetails';
+
+        $data = [
+            'form_params' => [
+                'categoryCode' => $code,
+                'userSecretKey' => $this->user_secret_key,
+            ]
+        ];
+
+        $res = $this->post($url, $data);
+        return $res;
+    }
 }
