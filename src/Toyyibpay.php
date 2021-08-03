@@ -145,6 +145,29 @@ class Toyyibpay
     }
 
     #
+    # Toyyibpay Run Bill
+    #
+    public function runBill($code, $bill_object)
+    {
+        $url = $this->toyyibpay_uri.'/index.php/api/runBill';
+
+        $data = [
+            'form_params' => [
+                'userSecretKey' => $this->user_secret_key,
+                'billBankID'=> $bill_object->billBankID,
+                'billCode'=> $bill_object->billCode,
+                'billpaymentAmount'=> $bill_object->billpaymentAmount ?? '',
+                'billpaymentPayorName'=> $bill_object->billpaymentPayorName ?? '',
+                'billpaymentPayorPhone'=> $bill_object->billpaymentPayorPhone ?? '',
+                'billpaymentPayorEmail'=> $bill_object->billpaymentPayorEmail ?? '',
+            ]
+        ];
+
+        $res = $this->post($url, $data);
+        return $res;
+    }
+
+    #
     # Toyyibpay Get Payment Link
     #
     public function billPaymentLink($bill_code)
