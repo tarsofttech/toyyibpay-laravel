@@ -16,12 +16,12 @@ class ToyyibpayServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/config/toyyibpay.php',
+            __DIR__ . '/config/Toyyibpay.php',
             'toyyibpay'
         );
 
         $this->publishes([
-            __DIR__ . '/config/toyyibpay.php' => config_path('toyyibpay.php')
+            __DIR__ . '/config/Toyyibpay.php' => config_path('toyyibpay.php')
         ]);
     }
 
