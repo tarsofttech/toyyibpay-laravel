@@ -85,13 +85,17 @@ Toyyibpay::createCategory($name, $description);
 #### Get Category
 
 ```php
-Toyyibpay::getCategory($code);
+Toyyibpay::getCategory($category_code);
 ```
 
 #### Create Bill
 
 ```php
-Toyyibpay::createBill($code, $bill_object);
+Toyyibpay::createBill($category_code, [
+    'billName' => $request->bill_name,
+    'billDescription' => $request->bill_description,
+    ...
+]);
 ```
 
 #### Get Bill Payment Link
