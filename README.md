@@ -98,6 +98,13 @@ Toyyibpay::createBill($category_code, [
 ]);
 ```
 
+Let's say you have an array of data that you want to convert into an object before passing it to ```Toyyibpay::createBill($category_code, $array)```. You can use the ```stdClass``` class, which is a built-in class in PHP for creating objects on-the-fly. Here's how you can do it:
+
+```
+Toyyibpay::createBill($category_code, (object)$array)
+```
+
+
 #### Get Bill Payment Link
 
 ```php
