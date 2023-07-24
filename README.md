@@ -103,7 +103,6 @@ Let's say you have an array of data that you want to convert into an object befo
 Toyyibpay::createBill($category_code, (object)$array)
 ```
 
-
 #### Get Bill Payment Link
 
 ```php
