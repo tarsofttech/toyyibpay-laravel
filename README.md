@@ -27,24 +27,6 @@ TOYYIBPAY_REDIRECT_URI=ADD-TOYYIBPAY_REDIRECT_URI
 TOYYIBPAY_SANDBOX=ADD-TOYYIBPAY_SANDBOX-MODE
 ```
 
-
-## Auto Discovery
-
-If you're using Laravel 5.5+ you don't need to manually add the service provider or facade. This will be Auto-Discovered. For all versions of Laravel below 5.5, you must manually add the ServiceProvider & Facade to the appropriate arrays within your Laravel project `config/app.php`
-
-
-#### Provider
-
-```php
-Tarsoft\Toyyibpay\ToyyibpayServiceProvider::class,
-```
-
-#### Alias / Facade
-
-```php
-'Toyyibpay' => Tarsoft\Toyyibpay\ToyyibpayFacade::class,
-```
-
 ## Usage
 
 #### Use Toyyibpay Facade
@@ -114,7 +96,6 @@ Before opening an issue there are a couple of considerations:
 * You are all cute and geek!
 * **Check** that the issue is not *specific to your development environment* setup.
 * **Provide** *duplication steps*.
-* If you have a questions send me an email to tarmizi@mizi.my
 * Need a coach or assistance, I can do my best on Telegram: https://t.me/tarmizisanusi
 * Please be considerate that this is an open source project that I provide to the community for FREE.
 
